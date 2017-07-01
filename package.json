@@ -4,6 +4,6 @@
         "cheerio-httpcli": "^0.7.0"
     },
     "scripts": {
-        "start": "node ./scraper.js"
+        "build": "node ./scraper.js"
     }
 }
