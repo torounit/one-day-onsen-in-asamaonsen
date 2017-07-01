@@ -47,7 +47,12 @@ client.fetch(list).then( result => {
 		return data
 	})
 	console.log('--- Create JSON ---')
-	fs.writeFileSync('data.json', JSON.stringify(data, null, "    "));
+
+	if (!fs.existsSync('dist')){
+		fs.mkdirSync('dist');
+	}
+
+	fs.writeFileSync('dist/data.json', JSON.stringify(data, null, "    "));
 
 })
 
